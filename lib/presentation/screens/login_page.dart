@@ -125,7 +125,10 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   child: const Text("회원가입", style: TextStyle(color: FColors.blue, fontSize: 20.0),)
               ),
-            )
+            ),
+            SizedBox(
+                height: 100.0,
+                child: TextButton(onPressed: (){Navigator.pushNamed(context, '/home');}, child: Text("건너뛰기")))
           ],
         ),
       ),
