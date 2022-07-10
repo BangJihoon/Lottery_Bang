@@ -6,7 +6,7 @@ class FColors {
   FColors._();
 
   static const Color black = Color(0xFF222B45);
-  static const Color blue = Color(0xFF3366FF);
+  static const Color blue = Color(0xFF007BC3);
   static const Color grey_0 = Color(0xFFF7F9FC);
   static const Color grey_1 = Color(0xFFf7f7f7);
   static const Color grey_2 = Color(0xFFddd7d7);

@@ -4,7 +4,7 @@ import 'package:lottery_bang/presentation/screens/login_page.dart';
 import 'package:lottery_bang/theme/color.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -36,13 +36,10 @@ class MainApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const LoginPage(),
+        '/login': (context) => const LoginPage(),
         '/home': (context) => const Home(),
       },
-      home: const Scaffold(
-          body: LoginPage(),
-          backgroundColor: FColors.white
-      ),
+      home: const LoginPage(),
     );
   }
 }
