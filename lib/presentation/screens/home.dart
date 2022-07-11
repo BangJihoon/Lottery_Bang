@@ -58,7 +58,17 @@ class _HomeState extends State<Home> {
                     items: [0, 1, 2, 3, 4, 5, 6 ,7 ].map((i) {
                       return Builder(
                         builder: (BuildContext context) {
-                          return Container(color: FColors.black,);
+                          return Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              LotteryNumber('1'),
+                              LotteryNumber('12'),
+                              LotteryNumber('22'),
+                              LotteryNumber('33'),
+                              LotteryNumber('44'),
+                              LotteryNumber('45'),
+                            ],
+                          );
                         }); //  <- 반복문을 이용한 contents를 만들어주었음 내용은 생략
                     }).toList(),
                   )
@@ -69,5 +79,30 @@ class _HomeState extends State<Home> {
         ),
     );
   }
+}
+
+class LotteryNumber extends StatelessWidget {
+  LotteryNumber(this.number);
+  final String number;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 45,
+      height: 45,
+      alignment: Alignment.bottomCenter,
+      margin: const EdgeInsets.all(1.5),
+      decoration: const BoxDecoration(
+        shape: BoxShape.circle,
+        color: Color(0xFFe0f2f1),
+      ),
+      padding: const EdgeInsets.fromLTRB(0, 0, 0, 3),
+      child: Text(
+          number,
+          textAlign: TextAlign.center,
+          style: const TextStyle(fontSize: 20.0,fontWeight: FontWeight.w500,) ),
+    );
+  }
+
 }
 
