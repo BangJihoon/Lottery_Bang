@@ -17,24 +17,9 @@ class _LoginPageState extends State<LoginPage> {
           padding: const EdgeInsets.all(50.0),
           child:  Column(
             children: [
-              const SizedBox(
-                height: 50,
-              ),
-              RichText(
-                  text: const TextSpan(
-                      text: "동행",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 48,
-                          color: FColors.orange),
-                      children: [
-                        TextSpan(
-                            text: "복권",
-                            style: TextStyle(color: FColors.logo))
-                      ]),
-                ),
+              TitleText(48.0,30.0),
               const Padding(
-                padding: EdgeInsets.all(40.0),
+                padding: EdgeInsets.fromLTRB(0,0,0,30),
                 child: Text(
                   '연동 로그인',
                   style: TextStyle(
@@ -136,5 +121,33 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+}
+
+class TitleText extends StatelessWidget {
+  TitleText(this.fontValue, this.paddingValue);
+
+  final double fontValue;
+  final double paddingValue;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(paddingValue),
+      child: RichText(
+          text: TextSpan(
+              text: "동행",
+              style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  color: FColors.orange,
+                  fontSize: fontValue),
+              children: const [
+                 TextSpan(
+                    text: "복권",
+                    style: TextStyle(color: FColors.logo))
+              ]),
+        ),
+    );
+  }
+
 }
 
