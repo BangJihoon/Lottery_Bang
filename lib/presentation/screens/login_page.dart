@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lottery_bang/theme/color.dart';
+import 'package:lottery_bang/presentation/components/title_text.dart';
+import 'package:lottery_bang/theme/Fcolor.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -114,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(
                   height: 100.0,
-                  child: TextButton(onPressed: (){Navigator.pushNamed(context, '/home');}, child: Text("건너뛰기")))
+                  child: TextButton(onPressed: (){Navigator.popAndPushNamed(context, '/home');}, child: Text("건너뛰기")))
             ],
           ),
         ),
@@ -122,32 +123,3 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-
-class TitleText extends StatelessWidget {
-  TitleText(this.fontValue, this.paddingValue);
-
-  final double fontValue;
-  final double paddingValue;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(paddingValue),
-      child: RichText(
-          text: TextSpan(
-              text: "동행",
-              style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  color: FColors.orange,
-                  fontSize: fontValue),
-              children: const [
-                 TextSpan(
-                    text: "복권",
-                    style: TextStyle(color: FColors.logo))
-              ]),
-        ),
-    );
-  }
-
-}
-

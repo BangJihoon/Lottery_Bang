@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottery_bang/presentation/screens/home.dart';
 import 'package:lottery_bang/presentation/screens/login_page.dart';
-import 'package:lottery_bang/theme/color.dart';
+import 'package:lottery_bang/theme/Fcolor.dart';
 
 void main() {
   runApp(MainApp());
@@ -19,6 +19,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       /// 앱 테마 설정
       theme: ThemeData(
+        appBarTheme: const AppBarTheme(color : FColors.white),
         /// 기본 글꼴
         fontFamily: 'lottery_bang',
         /// 기본 배경
