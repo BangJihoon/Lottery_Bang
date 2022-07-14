@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottery_bang/presentation/screens/home.dart';
 import 'package:lottery_bang/presentation/screens/login_page.dart';
+import 'package:lottery_bang/presentation/screens/notification.dart';
 import 'package:lottery_bang/theme/Fcolor.dart';
 
 void main() {
@@ -37,10 +38,11 @@ class MainApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/login': (context) => const LoginPage(),
+        '/login': (context) => const ScreenLogin(),
         '/home': (context) => const Home(),
+        '/notification' : (context) => const ScreenNotification(),
       },
-      home: const LoginPage(),
+      home: const ScreenLogin(),
     );
   }
 }

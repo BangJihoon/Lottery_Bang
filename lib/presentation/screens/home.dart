@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:lottery_bang/presentation/components/title_text.dart';
+import 'package:lottery_bang/presentation/components/appbar_title_text.dart';
 import 'package:lottery_bang/theme/Fcolor.dart';
 import 'package:lottery_bang/theme/Ficons.dart';
 
@@ -53,7 +53,9 @@ class _HomeState extends State<Home> {
           IconButton(
             icon: const Icon(FIcons.notification,color: FColors.black,),
             tooltip: '알림',
-            onPressed: (){},
+            onPressed: (){
+              Navigator.pushNamed(context, '/notification');
+            },
           ),
         ]
       ),

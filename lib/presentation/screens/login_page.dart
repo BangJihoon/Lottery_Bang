@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:lottery_bang/presentation/components/title_text.dart';
+import 'package:lottery_bang/presentation/components/appbar_title_text.dart';
 import 'package:lottery_bang/theme/Fcolor.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class ScreenLogin extends StatefulWidget {
+  const ScreenLogin({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<ScreenLogin> createState() => _ScreenLoginState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _ScreenLoginState extends State<ScreenLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
