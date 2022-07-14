@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
-class FIcons {
-  FIcons._();
+class MyIcons {
+  MyIcons._();
 
   static const _kFontFam = 'lottery_bang';
   static const String? _kFontPkg = null;

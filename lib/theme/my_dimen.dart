@@ -1,4 +1,4 @@
-class FDimen {
+class MyDimen {
   static const double defaultTabBarSize = 60;
   static const double defaultMultiSelectChipSize = 60;
 

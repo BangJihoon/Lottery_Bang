@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lottery_bang/theme/Fcolor.dart';
+import 'package:lottery_bang/theme/my_color.dart';
 
 class TitleText extends StatelessWidget {
   TitleText(this.fontValue, this.paddingValue);
@@ -16,12 +16,12 @@ class TitleText extends StatelessWidget {
             text: "동행",
             style: TextStyle(
                 fontWeight: FontWeight.w700,
-                color: FColors.orange,
+                color: MyColors.orange,
                 fontSize: fontValue),
             children: const [
               TextSpan(
                   text: "복권",
-                  style: TextStyle(color: FColors.logo))
+                  style: TextStyle(color: MyColors.logo))
             ]),
       ),
     );

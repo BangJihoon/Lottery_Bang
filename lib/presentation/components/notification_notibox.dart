@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottery_bang/domain/enum/notification_type.dart';
-import 'package:lottery_bang/theme/Fcolor.dart';
+import 'package:lottery_bang/theme/my_color.dart';
 
 class NotiBox extends StatelessWidget {
   String _date;
@@ -15,12 +15,12 @@ class NotiBox extends StatelessWidget {
         children: [
           Text(
             _date,
-            style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15.0, color: FColors.blue),
+            style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15.0, color: MyColors.blue),
           ),
           const Divider(
             thickness: 1.0,
             height: 14.0,
-            color: FColors.grey_3,
+            color: MyColors.grey_3,
           ),
           NofiBoxDateRow('강이록', '1', NotiType.likey),
           NofiBoxDateRow('강이록', '2', NotiType.comment),
@@ -55,14 +55,14 @@ class NotiBox extends StatelessWidget {
                       TextSpan(
                         text: _notiType.toStringType(),
                         style: const TextStyle(
-                            color: FColors.black, fontWeight: FontWeight.normal),
+                            color: MyColors.black, fontWeight: FontWeight.normal),
                       ),
                     ],
                   ),
                 ),
                 Text(
                   '$_time시간전',
-                  style: const TextStyle(color: FColors.grey_3, fontSize: 12),
+                  style: const TextStyle(color: MyColors.grey_3, fontSize: 12),
                 )
               ],
             ),

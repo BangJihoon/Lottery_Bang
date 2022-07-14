@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:lottery_bang/presentation/components/appbar_title_text.dart';
-import 'package:lottery_bang/theme/Fcolor.dart';
+import 'package:lottery_bang/theme/my_color.dart';
 
-class ScreenLogin extends StatefulWidget {
-  const ScreenLogin({Key? key}) : super(key: key);
+class Screen_Login extends StatefulWidget {
+  const Screen_Login({Key? key}) : super(key: key);
 
   @override
-  State<ScreenLogin> createState() => _ScreenLoginState();
+  State<Screen_Login> createState() => _Screen_LoginState();
 }
 
-class _ScreenLoginState extends State<ScreenLogin> {
+class _Screen_LoginState extends State<Screen_Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,23 +25,23 @@ class _ScreenLoginState extends State<ScreenLogin> {
                   '연동 로그인',
                   style: TextStyle(
                       fontSize: 23.0,
-                      color: FColors.grey_4
+                      color: MyColors.grey_4
                   ),
                 ),
               ),
               const TextField(
                 decoration: InputDecoration(
                   labelText: '아이디',
-                  labelStyle: TextStyle(color: FColors.grey_4),
+                  labelStyle: TextStyle(color: MyColors.grey_4),
                   hintText: 'Enter your ID',
-                  hintStyle: TextStyle(color: FColors.grey_2),
+                  hintStyle: TextStyle(color: MyColors.grey_2),
                   enabledBorder: UnderlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                    borderSide: BorderSide(width: 1, color: FColors.grey_2),
+                    borderSide: BorderSide(width: 1, color: MyColors.grey_2),
                   ),
                   focusedBorder: UnderlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                    borderSide: BorderSide(width: 2, color: FColors.blue),
+                    borderSide: BorderSide(width: 2, color: MyColors.blue),
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -52,16 +52,16 @@ class _ScreenLoginState extends State<ScreenLogin> {
               const TextField(
                 decoration: InputDecoration(
                   labelText: '비밀번호',
-                  labelStyle: TextStyle(color: FColors.grey_4),
+                  labelStyle: TextStyle(color: MyColors.grey_4),
                   hintText: 'Enter your Password',
-                  hintStyle: TextStyle(color: FColors.grey_2),
+                  hintStyle: TextStyle(color: MyColors.grey_2),
                   enabledBorder: UnderlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                    borderSide: BorderSide(width: 1, color: FColors.grey_2),
+                    borderSide: BorderSide(width: 1, color: MyColors.grey_2),
                   ),
                   focusedBorder: UnderlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                    borderSide: BorderSide(width: 1, color: FColors.blue),
+                    borderSide: BorderSide(width: 1, color: MyColors.blue),
                   ),
                   border: UnderlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -88,10 +88,10 @@ class _ScreenLoginState extends State<ScreenLogin> {
                             side: BorderSide(color: Colors.blue)
                         ),
                       ),
-                      backgroundColor: MaterialStateProperty.all<Color>(FColors.blue),
+                      backgroundColor: MaterialStateProperty.all<Color>(MyColors.blue),
                       padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(15.0)),
                     ),
-                    child: const Text("로그인", style: TextStyle(color: FColors.white, fontSize: 20.0),)
+                    child: const Text("로그인", style: TextStyle(color: MyColors.white, fontSize: 20.0),)
                 ),
               ),
               SizedBox(height: 10.0,),
@@ -107,10 +107,10 @@ class _ScreenLoginState extends State<ScreenLogin> {
                             side: BorderSide(color: Colors.blue)
                         ),
                       ),
-                      backgroundColor: MaterialStateProperty.all<Color>(FColors.white),
+                      backgroundColor: MaterialStateProperty.all<Color>(MyColors.white),
                       padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(15.0)),
                     ),
-                    child: const Text("회원가입", style: TextStyle(color: FColors.blue, fontSize: 20.0),)
+                    child: const Text("회원가입", style: TextStyle(color: MyColors.blue, fontSize: 20.0),)
                 ),
               ),
               SizedBox(

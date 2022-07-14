@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class FColors {
+class MyColors {
   // This class is not meant to be instantiated or extended; this constructor
   // prevents instantiation and extension.
-  FColors._();
+  MyColors._();
 
   static const Color black = Color(0xFF222B45);
   static const Color blue = Color(0xFF007BC3);
