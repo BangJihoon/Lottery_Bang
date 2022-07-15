@@ -49,13 +49,15 @@ class _HomeState extends State<Home> {
       body: currentScreen(_selectedIndex),
       /// 하단 바
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         selectedItemColor: MyColors.blue,
         unselectedItemColor: MyColors.grey_5,
+        showUnselectedLabels: true,
         items: const [
           BottomNavigationBarItem(label: '홈', icon: Icon(MyIcons.home)),
-          BottomNavigationBarItem(label: '구매', icon: Icon(MyIcons.trainer)),
-          BottomNavigationBarItem(label: '통계', icon: Icon(MyIcons.notification)),
-          BottomNavigationBarItem(label: '마이페이지', icon: Icon(MyIcons.my_page))
+          BottomNavigationBarItem(label: '구매', icon: Icon(Icons.credit_score)),
+          BottomNavigationBarItem(label: '통계', icon: Icon(Icons.leaderboard,)),
+          BottomNavigationBarItem(label: '마이페이지', icon: Icon(Icons.person,)),
         ],
         onTap: (index) {
           _onItemTapped(index);
