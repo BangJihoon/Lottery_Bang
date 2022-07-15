@@ -64,6 +64,11 @@ class _HomeState extends State<Home> {
         },
       ),
       /// 플로팅 버튼 (QR 스캔)
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        backgroundColor: MyColors.black,
+        child: const Icon(Icons.qr_code),
+      ),
     );
   }
 
