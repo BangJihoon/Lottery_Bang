@@ -50,9 +50,12 @@ class _HomeState extends State<Home> {
       /// 하단 바
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        currentIndex: _selectedIndex,
+        /*
+        showUnselectedLabels: true,
         selectedItemColor: MyColors.blue,
         unselectedItemColor: MyColors.grey_5,
-        showUnselectedLabels: true,
+        */
         items: const [
           BottomNavigationBarItem(label: '홈', icon: Icon(MyIcons.home)),
           BottomNavigationBarItem(label: '구매', icon: Icon(Icons.credit_score)),

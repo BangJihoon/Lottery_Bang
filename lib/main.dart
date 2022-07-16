@@ -22,12 +22,11 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         // 앱 바 설정
         appBarTheme: const AppBarTheme(color : MyColors.white, foregroundColor: MyColors.grey_5),
-        primaryColor: MyColors.white,
-        // 기본 글꼴
-        fontFamily: 'lottery_bang',
-        // 기본 배경
-        backgroundColor: MyColors.white,
         scaffoldBackgroundColor: MyColors.white,
+        primarySwatch: Colors.blue,
+        fontFamily: 'lottery_bang',
+        // primaryColor: MyColors.white,
+        // backgroundColor: MyColors.white,
         // 기본 텍스트 스타일
         textTheme:  const TextTheme(
           bodyText1: TextStyle(
@@ -39,11 +38,11 @@ class MainApp extends StatelessWidget {
       /// routes 설정
       initialRoute: '/',
       routes: {
-        '/login': (context) => const Screen_Login(),
-        '/home': (context) => const Home(),
-        '/notification' : (context) => const Screen_Notification(),
+        '/login': (context) => Screen_Login(),
+        '/home': (context) => Home(),
+        '/notification' : (context) => Screen_Notification(),
       },
-      home: const Screen_Login(),
+      home: Screen_Login(),
     );
   }
 }
