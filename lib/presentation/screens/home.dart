@@ -5,6 +5,7 @@ import 'package:lottery_bang/presentation/screens/screen_login_page.dart';
 import 'package:lottery_bang/presentation/screens/screen_notification.dart';
 import 'package:lottery_bang/theme/my_color.dart';
 import 'package:lottery_bang/theme/my_icons.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -14,7 +15,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
       /// 하단 바
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        currentIndex: _selectedIndex,
+        currentIndex: _selectedIndex, // 필수!!!
         /*
         showUnselectedLabels: true,
         selectedItemColor: MyColors.blue,
@@ -80,8 +80,20 @@ class _HomeState extends State<Home> {
     switch (index) {
       case 0:
         return Screen_Home();
+        // qr 위젯 테스트
       case 1:
-        return Screen_Home();
+        return Center(
+          child: Column(
+            children: <Widget>[
+              QrImage(
+                data: "https://www.daum.net/",
+                backgroundColor: Colors.white,
+                size: 200,
+              )
+            ],
+          ),
+        );
+        // 통계화면이 아직 없으므로 noti연결
       case 2:
         return Screen_Notification();
       default:
