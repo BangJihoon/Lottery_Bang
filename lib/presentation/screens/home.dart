@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottery_bang/controller/permision_manage.dart';
 import 'package:lottery_bang/presentation/components/appbar_title_text.dart';
 import 'package:lottery_bang/presentation/screens/screen_home.dart';
 import 'package:lottery_bang/presentation/screens/screen_login_page.dart';
@@ -68,7 +69,9 @@ class _HomeState extends State<Home> {
       ),
       /// 플로팅 버튼 (QR 스캔)
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          PermissionManage().requestCameraPermission(context);
+        },
         backgroundColor: MyColors.black,
         child: const Icon(Icons.qr_code),
       ),
